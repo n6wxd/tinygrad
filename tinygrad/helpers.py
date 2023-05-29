@@ -26,6 +26,7 @@ class DebugSingleton:
   def __call__(self, x): self.value = x
   def __bool__(self): return self.value != 0
   def __ge__(self, x): return self.value >= x
+  def __lt__(self, x): return self.value < x
 
 DEBUG, IMAGE = DebugSingleton(), getenv("IMAGE", 0)
 
